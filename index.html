@@ -41,7 +41,7 @@
           <div class="tab-pane fade" id="follow-classic" role="tabpanel" aria-labelledby="follow-tab-classic">
             <form id="reg" >
               <label for="full name">full name</label>
-              <input type="text" name="full name" placeholder="full name"  required>
+              <input type="text" name="full name" placeholder="full name" id="email-signup"  required>
               <label for="email">email</label>
               <input type="email" name="email" placeholder="....@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
               
@@ -64,6 +64,45 @@
       </div>
       <!-- Classic tabs -->
     </div>
+
+    <!-- //firebase starts -->
+
+                    <!-- The core Firebase JS SDK is always required and must be listed first -->
+                <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
+                <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-auth.js"></script>
+                <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-firestore.js"></script>
+
+
+                <!-- TODO: Add SDKs for Firebase products that you want to use
+                    https://firebase.google.com/docs/web/setup#config-web-app -->
+
+                <script>
+                  // Your web app's Firebase configuration
+                  var firebaseConfig = {
+                    apiKey: "AIzaSyAdaIc4SFjv53epjtmTcFjrSWdABzHefFs",
+                    authDomain: "lxdev-6d11a.firebaseapp.com",
+                    databaseURL: "https://lxdev-6d11a.firebaseio.com",
+                    projectId: "lxdev-6d11a",
+                    // storageBucket: "lxdev-6d11a.appspot.com",
+                    // messagingSenderId: "157481401345",
+                    appId: "1:157481401345:web:36afad9dfeace8ea361400"
+                  };
+                  // Initialize Firebase
+                  firebase.initializeApp(firebaseConfig);
+
+                  //make auth and fire store references
+                  const auth = firebase.auth();
+                  const db = firebase.firestore();
+
+
+                  //update firestore setting
+                  db.settings({ timestampsInSnapshots: true })
+                </script>
+
+
+
+
+    <!-- //firebase end -->
 
     <script src='/js/index.js'></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

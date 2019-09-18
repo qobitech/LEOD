@@ -1,5 +1,6 @@
 const signupform = document.querySelector('reg');
-signup.addEventListener('submit',(e)=>{
+
+signupform.addEventListener('submit',(e)=>{
     e.preventDefault();
 
 
@@ -8,5 +9,6 @@ signup.addEventListener('submit',(e)=>{
     const password = signupform['password'].value;
 
     console.log(email, password);
+
 
 })

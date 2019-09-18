@@ -1,0 +1,104 @@
+
+.bg{
+    background-image: url(/images/background.png);
+    min-height: 100vh;
+    padding: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-tab{
+    width: 400px!important;
+    padding: 30px 10px!important;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 3px;
+    
+}
+ul a{
+    color: white;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-size: 18px;
+    padding: 15px!important;
+    margin-left: 30px;
+    
+}
+ul a:hover{
+    color: white;
+}
+form{
+    display: flex;
+    flex-flow: column;
+    padding: 30px;
+
+}
+input{
+    color: white;
+    width: 95%;
+    margin-bottom: 30px;
+    border: 1px solid white;
+    background: transparent ;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    padding: 10px;
+    transition: 0.5s;
+    /* text-transform: capitalize; */
+
+    
+}
+input:focus{
+    outline: none;
+}
+label{
+    text-transform: capitalize;
+}
+span{
+    text-transform: capitalize;
+    font-size: 14px;
+}
+input[type='checkbox']{
+    width: inherit;
+    margin-right: 5px;
+}
+input[type="submit"]{
+    background: #828282;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    border-bottom: none;
+    color:white;
+    border-radius: 4px;
+    margin-bottom: -5px!important;
+    transition: 0.4s;
+    text-transform: capitalize;
+}
+input[type="submit"]:hover{
+    background: #afadad;
+}
+.f-p{
+    color: white;
+    text-transform: capitalize;
+    display: block;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.f-p:hover{
+    color: white;
+}
+#myClassicTabContent{
+    border: none!important;
+}
+a[aria-selected='true']{
+    border-bottom: 1px solid white;
+}
+input[placeholder="....@gmail.com"]{
+    
+}
+.message{
+    color: red;
+    padding: 0px;
+    margin: 0px;
+    text-transform: lowercase;
+    font-size: 10px;
+}
+

@@ -15,7 +15,8 @@ signupform.addEventListener('submit',(e)=>{
         console.log(cred.user)
         
         //signup successful
-        window.location.href = "#profile-classic"
+        document.querySelector('profile-classic');
+        window.location.href = document.getElementById('profile-classic');
     })
 
 

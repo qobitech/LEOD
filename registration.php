@@ -1,3 +1,4 @@
+<?php include('server.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +26,8 @@
         </ul>
         <div class="tab-content border-right border-bottom border-left rounded-bottom" id="myClassicTabContent">
           <div class="tab-pane fade active show" id="profile-classic" role="tabpanel" aria-labelledby="profile-tab-classic">
-              <form id="logForm">
+              <form id="logForm" method="post" action="registration.php">
+              <?php include('errors.php'); ?>
                   <label for="username">username</label>
                   <input type="text" name="username" placeholder="username" required>
                   <label for="password">password</label>
@@ -33,30 +35,31 @@
                   <div>
                       <input type="checkbox"><span>remember me</span>
                   </div>
-                  <input type="submit" value="login">
+                  <input type="submit"   name="login_user" value="login">
               </form>
-              <a href="" class="f-p">forgotten password?</a>
+              <a href="index.php" class="f-p">forgotten password?</a>
             
           </div>
           <div class="tab-pane fade" id="follow-classic" role="tabpanel" aria-labelledby="follow-tab-classic">
-            <form id="reg" >
+
+            <form id="reg" method="post" action="registration.php" >
               <label for="full name">full name</label>
-              <input type="text" name="full name" placeholder="full name"  required>
+              <input type="text" name="username" placeholder="username" value="<?php echo $username;?>" required >
               <label for="email">email</label>
-              <input type="email" name="email" placeholder="....@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+              <input type="email" name="email" placeholder="....@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" value="<?php echo $email; ?>" required>
               
               <label for="password">password</label>
-              <input type="password" name="password" placeholder="password" id="password" minlength="8" maxlength="16" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+              <input type="password" name="password_1" placeholder="password" id="password" minlength="8" maxlength="16" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
               <label for="re-enter password">re-enter password</label>
               <span class="message"></span>
-              <input type="password" name="re-enter password" placeholder="re-enter password"  minlength="8" maxlength="16" id="reEnterPassword" required>
+              <input type="password" name="password_2" placeholder="re-enter password"  minlength="8" maxlength="16" id="reEnterPassword" required>
               
               <div>
                   <!-- <input type="checkbox"><span>remember me</span> -->
               </div>
-              <input type="submit" value="sign up">
+              <input type="submit" name="reg_user" value="sign up">
           </form>
-          <a href="" class="f-p">already have an account?</a>
+          <a href="registration.php" class="f-p">already have an account?</a>
           </div>
           
         </div>

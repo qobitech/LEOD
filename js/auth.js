@@ -1,8 +1,8 @@
-const signupform = document.querySelector('reg');
+const signupform = document.getElementById('reg');
 
 signupform.addEventListener('submit',(e)=>{
     e.preventDefault();
-
+    alert('submitted');
 
     //get user info
     const email = signupform['email-signup'].value;

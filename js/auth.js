@@ -19,16 +19,16 @@ signupform.addEventListener('submit',(e)=>{
     setTimeout(logout,2000);
     signupform.reset();
     message.innerHTML=`REGISTRATION SUCCESSFUL`;
-
+    window.
 
 })
 
 function logout(){
-    const lout = document.querySelector('');
-    lout.addEventListener('click', (e)=>{
-        e.preventDefault();
+    // const lout = document.querySelector('');
+    // lout.addEventListener('click', (e)=>{
+        // e.preventDefault();
         auth.signOut().then(res=>{
             console.log(res.user);
         })
-    })
+    // })
 }

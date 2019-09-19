@@ -1,7 +1,6 @@
-
-
 const signupform = document.getElementById('reg');
-message = document.querySelector('.message');
+
+//Registration
 signupform.addEventListener('submit',(e)=>{
     e.preventDefault();
    
@@ -13,17 +12,19 @@ signupform.addEventListener('submit',(e)=>{
     auth.createUserWithEmailAndPassword(email, password).then(cred => {
         console.log(cred.user)
         
+        //store username in database
+        cred.user.updateProfile({
+            displayName: user.firstName + ' ' + user.lastName
+        });
+
         //signup successful
         $('.nav-tabs a[href="#profile-classic"]').tab('show')
     })
-    // setTimeout(logout,2000);
-    signupform.reset();
-    // message.innerHTML=`REGISTRATION SUCCESSFUL`;
     
+    signupform.reset();
     firebase.auth().onAuthStateChanged(function(user){
         if(user){
             //User is signed in
-
             var user = firebase.auth().currentUser;
 
             if(user != null){
@@ -32,10 +33,43 @@ signupform.addEventListener('submit',(e)=>{
                 console.log('Welcome User :' + email_id +
                 '<br/>Verified : ' + email_verified)
                 send_verification();
+                setTimeout(logout,2000);
             }
         }
     })
 
+})
+
+
+const loginform = document.getElementById('logForm');
+
+//Login
+loginform.addEventListener('submit',(e)=>{
+    e.preventDefault();
+    //get user info
+    const email = document.getElementById('logmail').value;
+    const password = document.getElementById('logpass').value;
+    firebase.auth().signInWithEmailAndPassword(email,password).then(cred => {
+        console.log(cred.user)
+    })
+    firebase.auth().onAuthStateChanged(function(user){
+        if(user){
+            //User is signed in
+            var user = firebase.auth().currentUser;
+
+            if(user != null){
+                var email_id = user.email;
+                var email_verified = user.emailVerified;
+                console.log('Welcome User :' + email_id +
+                '<br/>Verified : ' + email_verified)
+                if(email_verified === true){
+                    window.location.href = "https://qobitech.github.io/LEOD/verifyemail.html";
+                }else{
+                    window.alert('Not verified');
+                }
+            }
+        }
+    })
 })
 
 function send_verification(){
@@ -49,39 +83,8 @@ function send_verification(){
     });
 }
 
-
-// function emailverification(){
-//     var actionCodeSettings = {
-//         url: 'https://qobitech.github.io/LEOD/?email=' + firebase.auth().currentUser.email,
-//         iOS: {
-//           bundleId: 'com.example.ios'
-//         },
-//         android: {
-//           packageName: 'com.example.android',
-//           installApp: true,
-//           minimumVersion: '12'
-//         },
-//         handleCodeInApp: false,
-//         // When multiple custom dynamic link domains are defined, specify which
-//         // one to use.
-//         dynamicLinkDomain: "example.page.link"
-//       };
-//       firebase.auth().currentUser.sendEmailVerification(actionCodeSettings)
-//         .then(function() {
-//           // Verification email sent.
-//         })
-//         .catch(function(error) {
-//           // Error occurred. Inspect error.code.
-//         });
-// }
-
-
 function logout(){
-    // const lout = document.querySelector('');
-    // lout.addEventListener('click', (e)=>{
-        // e.preventDefault();
         auth.signOut().then(res=>{
             console.log('user signed out');
         })
-    // })
 }

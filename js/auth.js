@@ -28,7 +28,7 @@ function logout(){
     // lout.addEventListener('click', (e)=>{
         // e.preventDefault();
         auth.signOut().then(res=>{
-            console.log(res.user);
+            console.log(res);
         })
     // })
 }

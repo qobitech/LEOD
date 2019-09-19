@@ -1,4 +1,4 @@
-alert('working');
+// alert('working');
 
 document.querySelector('#logForm').addEventListener('submit',(event)=>{
     event.preventDefault();

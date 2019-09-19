@@ -15,8 +15,7 @@ signupform.addEventListener('submit',(e)=>{
         console.log(cred.user)
         
         //signup successful
-        document.querySelector('profile-classic');
-        $('.nav-tabs a[href="#profile-classic"]').tab('show')
+        $('.nav tabs-cyan a[href="#profile-classic"]').tab('show')
     })
 
 

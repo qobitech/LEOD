@@ -1,4 +1,4 @@
-alert('submitted');
+// alert('submitted');
 
 // document.querySelector('#logForm').addEventListener('submit',(event)=>{
 //     event.preventDefault();

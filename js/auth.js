@@ -19,7 +19,7 @@ signupform.addEventListener('submit',(e)=>{
     setTimeout(logout,2000);
     signupform.reset();
     message.innerHTML=`REGISTRATION SUCCESSFUL`;
-    window.
+    
 
 })
 

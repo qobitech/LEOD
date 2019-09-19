@@ -16,7 +16,7 @@ signupform.addEventListener('submit',(e)=>{
         //signup successful
         $('.nav-tabs a[href="#profile-classic"]').tab('show')
     })
-    setTimeout(logout,2000);
+    // setTimeout(logout,2000);
     signupform.reset();
     // message.innerHTML=`REGISTRATION SUCCESSFUL`;
     

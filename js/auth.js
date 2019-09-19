@@ -7,8 +7,8 @@ signupform.addEventListener('submit',(e)=>{
    
 
     //get user info
-    const email = signupform['email-signup'].value;
-    const password = signupform['password'].value;
+    const email = document.getElementById('email-signup').value;
+    const password = document.getElementById('password').value;
 
     console.log(email, password);
 

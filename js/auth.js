@@ -31,6 +31,7 @@ signupform.addEventListener('submit',(e)=>{
                 var email_verified = user.emailVerified;
                 console.log('Welcome User :' + email_id +
                 '<br/>Verified : ' + email_verified)
+                send_verification();
             }
         }
     })
@@ -41,6 +42,7 @@ function send_verification(){
     var user = firebase.auth().currentUser;
     user.sendEmailVerification().then(function(){
         //Email sent
+        window.alert('Verification Sent')
     }).catch(function(error){
         //An error happened
     });

@@ -65,7 +65,7 @@ loginform.addEventListener('submit',(e)=>{
                 if(email_verified === true){
                     window.location.href = "https://qobitech.github.io/LEOD/loginsuccess.html";
                 }else{
-                    window.alert('Not verified');
+                    setTimeout(logout,2000);
                 }
             }
         }
@@ -75,8 +75,6 @@ loginform.addEventListener('submit',(e)=>{
 function send_verification(){
     var user = firebase.auth().currentUser;
     user.sendEmailVerification().then(function(){
-        //Email sent
-        // window.alert('Verification Sent')
         window.location.href = "https://qobitech.github.io/LEOD/verifyemail.html";
     }).catch(function(error){
         //An error happened
@@ -85,6 +83,6 @@ function send_verification(){
 
 function logout(){
         auth.signOut().then(res=>{
-            console.log('user signed out');
+            window.location.href = "https://qobitech.github.io/";
         })
 }

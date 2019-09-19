@@ -2,7 +2,7 @@
 
 const signupform = document.getElementById('reg');
 
-signupform.on('submit',(e)=>{
+signupform.addEventListener('submit',(e)=>{
     e.preventDefault();
    
 

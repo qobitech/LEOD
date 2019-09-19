@@ -10,7 +10,12 @@ signupform.addEventListener('submit',(e)=>{
     const email = document.getElementById('email-signup').value;
     const password = document.getElementById('password').value;
 
-    console.log(email, password);
+    //sign up the user
+    auth.createUserWithEmailAndPassword(email, password).then(cred => {
+        console.log(cred)
+    })
+
+
 
 
 })

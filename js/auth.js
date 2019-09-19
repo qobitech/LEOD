@@ -63,7 +63,7 @@ loginform.addEventListener('submit',(e)=>{
                 console.log('Welcome User :' + email_id +
                 '<br/>Verified : ' + email_verified)
                 if(email_verified === true){
-                    window.location.href = "https://qobitech.github.io/LEOD/verifyemail.html";
+                    window.location.href = "https://qobitech.github.io/LEOD/loginsuccess.html";
                 }else{
                     window.alert('Not verified');
                 }

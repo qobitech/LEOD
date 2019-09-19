@@ -12,7 +12,10 @@ signupform.addEventListener('submit',(e)=>{
 
     //sign up the user
     auth.createUserWithEmailAndPassword(email, password).then(cred => {
-        console.log(cred)
+        console.log(cred.user)
+        
+        //signup successful
+        window.location.href = "#profile-classic"
     })
 
 

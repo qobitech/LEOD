@@ -1,6 +1,6 @@
 
 .bg{
-    background-image: url(/images/background.png);
+    background-image: url('../images/background.png');
     min-height: 100vh;
     padding: 20px;
     color: white;

@@ -16,7 +16,7 @@ signupform.addEventListener('submit',(e)=>{
         
         //signup successful
         document.querySelector('profile-classic');
-        window.location.href = document.getElementById('profile-classic');
+        $('.nav-tabs a[href="profile-classic"]').tab('show')
     })
 
 

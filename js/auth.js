@@ -1,5 +1,6 @@
 const signupform = document.querySelector('reg');
-signup.addEventListener('submit',(e)=>{
+
+signup.on('submit',(e)=>{
     e.preventDefault();
 
     alert('we don show');

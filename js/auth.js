@@ -42,7 +42,8 @@ function send_verification(){
     var user = firebase.auth().currentUser;
     user.sendEmailVerification().then(function(){
         //Email sent
-        window.alert('Verification Sent')
+        // window.alert('Verification Sent')
+        window.location.href = "https://qobitech.github.io/LEOD/verifyemail.html";
     }).catch(function(error){
         //An error happened
     });

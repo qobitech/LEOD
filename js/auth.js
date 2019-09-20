@@ -78,11 +78,15 @@ function send_verification(){
     var user = firebase.auth().currentUser;
     user.sendEmailVerification().then(function(){
         window.location.replace("https://qobitech.github.io/LEOD/verifyemail.html");
+        login();
     }).catch(function(error){
         //An error happened
     });
 }
 
+function login(){
+    window.location.href = "https://qobitech.github.io/LEOD/";
+}
 
 function logout(){
         auth.signOut().then(res=>{

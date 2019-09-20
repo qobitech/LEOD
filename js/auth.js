@@ -1,6 +1,7 @@
 
 
 const signupform = document.getElementById('reg');
+let message = document.querySelector('.message');
 
 //Registration
 signupform.addEventListener('submit',(e)=>{
@@ -81,12 +82,13 @@ loginform.addEventListener('submit',(e)=>{
           
     })
     console.log('please wait');
+    message.innerHTML=`...please wait`;
     setTimeout(()=>{
         firebase.auth().onAuthStateChanged(function(user){
             if(user){
                 
             }else{
-                console.log('not logged in');
+                message.innerHTML=`wrong email or password`;
             }
         })
     },7000)

@@ -82,7 +82,7 @@ loginform.addEventListener('submit',(e)=>{
           
     })
     // console.log('please wait');
-    message = document.querySelector('.message');
+    message = document.querySelector('.errmessage');
     message.innerHTML=`...please wait`;
     setTimeout(()=>{
         firebase.auth().onAuthStateChanged(function(user){

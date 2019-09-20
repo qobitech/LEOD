@@ -97,9 +97,9 @@ function logout(){
         })
 }
 
-const email = document.getElementById('signout').value;
+const logout = document.getElementById('signout').value;
 
-signupform.addEventListener('click',(e)=>{
+logout.addEventListener('click',(e)=>{
     logout();
     HTMLFormControlsCollection.log('signout');
 })

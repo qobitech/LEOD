@@ -77,10 +77,10 @@ loginform.addEventListener('submit',(e)=>{
             }
         })    
     
-    }).then(function(error){
-        talk = 'error';
+    }).then(error=>{
+        console.log("console: "+error)
     })
-    console.log(talk);
+    // console.log(talk);
 
 })
 

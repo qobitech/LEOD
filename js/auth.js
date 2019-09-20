@@ -1,4 +1,4 @@
-if(location.protocol !== "https://qobitech.github.io/LEOD"){
+if(location.href !== "https://qobitech.github.io/LEOD"){
     location.replace(window.location.href.replace("https://qobitech.github.io/LEOD"));
 }
 

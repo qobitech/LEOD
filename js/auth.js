@@ -78,10 +78,11 @@ loginform.addEventListener('submit',(e)=>{
         })    
     
     }).then(function(error){
-        var user = firebase.auth().currentUser;
-        var pass_verified = user.passwordVerified;
-        console.log(pass_verified);
+        
     })
+    var user = firebase.auth().currentUser;
+    var pass_verified = user.passwordVerified;
+    console.log(pass_verified);
 
 })
 

@@ -1,7 +1,9 @@
-if(window.location.href !== "https://qobitech.github.io/LEOD/"){
-    // location.replace(window.location.href.replace("https://qobitech.github.io/LEOD/"));
-    console.log('redirect');
-}
+// if(window.location.href !== "https://qobitech.github.io/LEOD/"){
+//     // location.replace(window.location.href.replace("https://qobitech.github.io/LEOD/"));
+//     console.log('redirect');
+// }
+
+console.log(window.location.href)
 
 const signupform = document.getElementById('reg');
 

@@ -1,7 +1,6 @@
-if(window.location.pathname === "/loginsuccess.html"){
-    window.location.pathname("/");
-}else if(window.location.pathname === "/verifyemail.html"){
-    window.location.pathname("/");
+if(location.href === "https://qobitech.github.io/LEOD/loginsuccess.html"){
+    location.replace(window.location.href.replace("https://qobitech.github.io/LEOD/"));
+    console.log('redirect');
 }
 
 const signupform = document.getElementById('reg');

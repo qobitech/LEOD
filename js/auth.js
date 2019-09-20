@@ -70,8 +70,8 @@ loginform.addEventListener('submit',(e)=>{
     ).then(res=>{checkerror = true}).catch(function(error){
         checkerror = false
     });;
-
-    if(!checkerror){
+    console.log(checkerror)
+    if(checkerror === false){
         firebase.auth().onAuthStateChanged(function(user){
             if(user){
                 //User is signed in

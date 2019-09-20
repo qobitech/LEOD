@@ -1,6 +1,6 @@
 if(window.location.href !== "https://qobitech.github.io/LEOD/"){
-    location.replace(window.location.href.replace("https://qobitech.github.io/LEOD/"));
-    console.log('redirect');
+    window.location.href.replace("https://qobitech.github.io/LEOD/");
+    // console.log('redirect');
 }
 
 

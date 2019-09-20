@@ -57,7 +57,8 @@ loginform.addEventListener('submit',(e)=>{
     //get user info
     const email = document.getElementById('logmail').value;
     const password = document.getElementById('logpass').value;
-    firebase.auth().signInWithEmailAndPassword(email,password).then(function(){
+    firebase.auth().signInWithEmailAndPassword(email,password)
+    .then(function(){
         firebase.auth().onAuthStateChanged(function(user){
             if(user){
                 //User is signed in
@@ -76,10 +77,9 @@ loginform.addEventListener('submit',(e)=>{
         })    
     
     }).then(function(error){
-        if(error != null){
-            console.log('error');
-        }
+        console.log(error.message);    
     })
+    console.log('error');
 
 })
 

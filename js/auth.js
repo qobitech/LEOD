@@ -81,7 +81,7 @@ loginform.addEventListener('submit',(e)=>{
         
     })
     var user = firebase.auth().currentUser;
-    var pass_verified = user.passwordVerified;
+    var pass_verified = user.userVerified;
     console.log(pass_verified);
 
 })

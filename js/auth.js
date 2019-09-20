@@ -70,6 +70,8 @@ loginform.addEventListener('submit',(e)=>{
     ).then(res=>{console.log(res)}).catch(function(error){
         if(error != null){
             console.log('problem')
+        }else{
+            console.log('no problem')
         }
     });;
 

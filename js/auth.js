@@ -85,7 +85,7 @@ function send_verification(){
 }
 
 function login(){
-    window.location.replace = "https://qobitech.github.io/LEOD/";
+    window.location.replace("https://qobitech.github.io/LEOD/");
 }
 
 function logout(){

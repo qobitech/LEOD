@@ -78,12 +78,13 @@ loginform.addEventListener('submit',(e)=>{
         })    
     
     }).then(function(error){
-        firebase.auth().onAuthStateChanged(function(user){
-            if(!user){
-                console.log('not logged in');
-            }
-        })    
+          
     })
+    firebase.auth().onAuthStateChanged(function(user){
+        if(!user){
+            console.log('not logged in');
+        }
+    })  
     
 })
 

@@ -1,5 +1,5 @@
-if(location.protocol !== "https://qobitech.github.io/LEOD/"){
-    location.replace(window.location.href.replace("https://qobitech.github.io/LEOD/"));
+if(location.protocol !== "https://qobitech.github.io/LEOD"){
+    location.replace(window.location.href.replace("https://qobitech.github.io/LEOD"));
 }
 
 const signupform = document.getElementById('reg');

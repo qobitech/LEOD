@@ -76,7 +76,7 @@ loginform.addEventListener('submit',(e)=>{
         })    
     
     }).then(function(error){
-        
+        console.log('error');
     })
 
 })

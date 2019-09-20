@@ -89,6 +89,7 @@ loginform.addEventListener('submit',(e)=>{
             if(user){
                 
             }else{
+                message.style.color = "red";
                 message.innerHTML=`wrong email or password`;
             }
         })

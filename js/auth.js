@@ -67,7 +67,7 @@ loginform.addEventListener('submit',(e)=>{
           firebase.auth().currentUser.email, 
           password
         )
-    ).then(res=>{console.log(res)});
+    ).then(res=>{console.log(res.code)});
 
     // firebase.auth().onAuthStateChanged(function(user){
     //     if(user){

@@ -97,9 +97,9 @@ function logout(){
         })
 }
 
-const logoutbtn = document.getElementById('signout').value;
+// const logoutbtn = document.getElementById('signout').value;
 
-$('#signout').on('click',()=>{
-    // logout();
-    console.log('signout');
-})
+// $('#signout').on('click',()=>{
+//     // logout();
+//     console.log('signout');
+// })

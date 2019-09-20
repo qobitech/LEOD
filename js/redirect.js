@@ -7,11 +7,9 @@ function login(){
 }
 
 
-// const logoutbtn = document.getElementById('signout').value;
-
-// logoutbtn.addEventListener('click',(e)=>{
-//     // logout();
-//     console.log('signout');
-// })
+$('#signout').on('click',()=>{
+    // logout();
+    console.log('signout');
+})
 
 

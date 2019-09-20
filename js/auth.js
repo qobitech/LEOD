@@ -80,6 +80,7 @@ loginform.addEventListener('submit',(e)=>{
     }).then(function(error){
           
     })
+    console.log('please wait');
     setTimeout(()=>{
         firebase.auth().onAuthStateChanged(function(user){
             if(user){
@@ -88,7 +89,7 @@ loginform.addEventListener('submit',(e)=>{
                 console.log('not logged in');
             }
         })
-    },3000)
+    },7000)
       
     
 })

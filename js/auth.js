@@ -92,7 +92,7 @@ function send_verification(){
 
 
 function logout(){
-        auth.signOut().then(res=>{
+        auth.signOut().then(function(){
             window.location.replace("https://qobitech.github.io/LEOD");
         })
 }
@@ -101,5 +101,5 @@ const logoutbtn = document.getElementById('signout').value;
 
 logoutbtn.addEventListener('click',(e)=>{
     logout();
-    HTMLFormControlsCollection.log('signout');
+    console.log('signout');
 })

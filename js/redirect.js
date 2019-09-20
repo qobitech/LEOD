@@ -6,7 +6,6 @@ function login(){
     window.location.href = "https://qobitech.github.io/LEOD/";
 }
 
-
 $('#signout').on('click',()=>{
     // logout();
     console.log('signout');

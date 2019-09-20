@@ -61,7 +61,7 @@ loginform.addEventListener('submit',(e)=>{
         firebase.auth().onAuthStateChanged(function(user){
             if(user){
                 //User is signed in
-                var user = firebase.auth().currentUser;
+            var user = firebase.auth().currentUser;
     
                 if(user != null){
                     var email_id = user.email;
@@ -76,7 +76,7 @@ loginform.addEventListener('submit',(e)=>{
         })    
     
     }).then(function(error){
-        console.log('error')
+        
     })
 
 })
@@ -85,18 +85,20 @@ function send_verification(){
     var user = firebase.auth().currentUser;
     user.sendEmailVerification().then(function(){
         window.location.replace("https://qobitech.github.io/LEOD/verifyemail.html");
-        // login();
     }).catch(function(error){
         //An error happened
     });
 }
 
-function login(){
-    window.location.href = "https://qobitech.github.io/LEOD/";
-}
 
 function logout(){
         auth.signOut().then(res=>{
             window.location.replace("https://qobitech.github.io/LEOD");
         })
 }
+
+const email = document.getElementById('signout').value;
+
+signupform.addEventListener('click',(e)=>{
+    logout();
+})

@@ -61,14 +61,14 @@ loginform.addEventListener('submit',(e)=>{
         // console.log(cred.user)
 
     })
-    let checkerror = true;
+    let checkerror;
     firebase.auth().currentUser.reauthenticateWithCredential(
         firebase.auth.EmailAuthProvider.credential(
           firebase.auth().currentUser.email, 
           password
         )
     ).then(res=>{checkerror = res}).catch(function(error){
-        checkerror = false
+        checkerror = 'error'
     });;
     console.log(checkerror);
     // if(checkerror == true){

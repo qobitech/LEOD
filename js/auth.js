@@ -65,27 +65,26 @@ loginform.addEventListener('submit',(e)=>{
               password
             )
         ).then(res=>{checkerror = res}).catch(function(error){
-            if(error !== null){
-                console.log('error')
-            }else{
-                firebase.auth().onAuthStateChanged(function(user){
-                    if(user){
-                        //User is signed in
-                        var user = firebase.auth().currentUser;
-            
-                        if(user != null){
-                            var email_id = user.email;
-                            var email_verified = user.emailVerified;
-                            if(email_verified === true){
-                                window.location.replace("https://qobitech.github.io/LEOD/loginsuccess.html");
-                            }else{
-                                setTimeout(logout,2000);
-                            }
+                
+        }.then(
+            firebase.auth().onAuthStateChanged(function(user){
+                if(user){
+                    //User is signed in
+                    var user = firebase.auth().currentUser;
+        
+                    if(user != null){
+                        var email_id = user.email;
+                        var email_verified = user.emailVerified;
+                        if(email_verified === true){
+                            window.location.replace("https://qobitech.github.io/LEOD/loginsuccess.html");
+                        }else{
+                            setTimeout(logout,2000);
                         }
                     }
-                })
-            }
-        });;
+                }
+            })
+        )
+    )
 
     })
     

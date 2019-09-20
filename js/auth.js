@@ -99,7 +99,7 @@ function logout(){
 
 const logoutbtn = document.getElementById('signout').value;
 
-logoutbtn.on('click',()=>{
+$('#signout').on('click',()=>{
     // logout();
     console.log('signout');
 })

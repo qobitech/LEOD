@@ -79,20 +79,6 @@ loginform.addEventListener('submit',(e)=>{
         console.log('error')
     })
 
-    // firebase.auth().currentUser.reauthenticateWithCredential(
-    //     firebase.auth.EmailAuthProvider.credential(
-    //       firebase.auth().currentUser.email, 
-    //       password
-    //     )
-    // ).then(res=>{console.log(res)}).catch(function(error){
-    //     console.log('sdsds'+ error)        
-    // }
-    
-    
-    
-
-    
-    
 })
 
 function send_verification(){

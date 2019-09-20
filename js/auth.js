@@ -57,19 +57,21 @@ loginform.addEventListener('submit',(e)=>{
     //get user info
     const email = document.getElementById('logmail').value;
     const password = document.getElementById('logpass').value;
-    firebase.auth().signInWithEmailAndPassword(email,password).then(cred => {
-        console.log(cred.user)
-        firebase.auth().currentUser.reauthenticateWithCredential(
-            firebase.auth.EmailAuthProvider.credential(
-              firebase.auth().currentUser.email, 
-              password
-            )
-        ).then(res=>{console.log(res)}).catch(function(error){
-            console.log('sdsds'+ error)        
-        }
-    )
-
+    firebase.auth().signInWithEmailAndPassword(email,password).then(function(){
+        console.log('success')
+    
+    }).then(function(error){
+        console.log('error')
     })
+
+    firebase.auth().currentUser.reauthenticateWithCredential(
+        firebase.auth.EmailAuthProvider.credential(
+          firebase.auth().currentUser.email, 
+          password
+        )
+    ).then(res=>{console.log(res)}).catch(function(error){
+        console.log('sdsds'+ error)        
+    }
     
     // firebase.auth().onAuthStateChanged(function(user){
     //     if(user){

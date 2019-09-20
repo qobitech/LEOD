@@ -1,4 +1,4 @@
-if(window.location.href !== "https://qobitech.github.io/LEOD/verifyemail.html"){
+if(window.location.href === "https://qobitech.github.io/LEOD/verifyemail.html"){
     setTimeout(login,2000);
 } 
 

@@ -1,5 +1,5 @@
-if(location.href == "https://qobitech.github.io/LEOD/loginsuccess.html"){
-    location.replace(window.location.href.replace("https://qobitech.github.io/LEOD/"));
+if(window.location.href !== "https://qobitech.github.io/LEOD/"){
+    // location.replace(window.location.href.replace("https://qobitech.github.io/LEOD/"));
     console.log('redirect');
 }
 

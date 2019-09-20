@@ -56,6 +56,7 @@ auth.onAuthStateChanged(user => {
 let talk;
 loginform.addEventListener('submit',(e)=>{
     e.preventDefault();
+    message = document.querySelector('.errmessage');
     //get user info
     const email = document.getElementById('logmail').value;
     const password = document.getElementById('logpass').value;
@@ -72,6 +73,8 @@ loginform.addEventListener('submit',(e)=>{
                     if(email_verified === true){
                         window.location.replace("https://qobitech.github.io/LEOD/loginsuccess.html");
                     }else{
+                        message.style.color = "red";
+                        message.innerHTML=`email not verified`;
                         setTimeout(logout,2000);
                     }
                 }
@@ -82,7 +85,7 @@ loginform.addEventListener('submit',(e)=>{
           
     })
     // console.log('please wait');
-    message = document.querySelector('.errmessage');
+    
     message.style.color = "white";
     message.innerHTML=`...please wait`;
     setTimeout(()=>{

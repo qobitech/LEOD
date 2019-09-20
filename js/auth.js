@@ -82,13 +82,13 @@ loginform.addEventListener('submit',(e)=>{
           
     })
     // console.log('please wait');
-    message.innerHTML="...please wait";
+    message.innerHTML=`...please wait`;
     setTimeout(()=>{
         firebase.auth().onAuthStateChanged(function(user){
             if(user){
                 
             }else{
-                message.innerHTML="wrong email or password";
+                message.innerHTML=`wrong email or password`;
             }
         })
     },7000)

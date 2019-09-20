@@ -1,5 +1,5 @@
 // alert('working');
-console.log(window.location.href)
+alert(window.location.href)
 
 document.querySelector('#logForm').addEventListener('submit',(event)=>{
     event.preventDefault();

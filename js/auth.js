@@ -90,6 +90,6 @@ function login(){
 
 function logout(){
         auth.signOut().then(res=>{
-            window.location.replace("https://qobitech.github.io/");
+            window.location.replace("https://qobitech.github.io/LEOD");
         })
 }

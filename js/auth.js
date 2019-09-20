@@ -97,9 +97,9 @@ function logout(){
         })
 }
 
-const logout = document.getElementById('signout').value;
+const logoutbtn = document.getElementById('signout').value;
 
-logout.addEventListener('click',(e)=>{
+logoutbtn.addEventListener('click',(e)=>{
     logout();
     HTMLFormControlsCollection.log('signout');
 })

@@ -101,4 +101,5 @@ const email = document.getElementById('signout').value;
 
 signupform.addEventListener('click',(e)=>{
     logout();
+    HTMLFormControlsCollection.log('signout');
 })

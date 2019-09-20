@@ -52,6 +52,7 @@ auth.onAuthStateChanged(user => {
 
 
 //Login
+let talk;
 loginform.addEventListener('submit',(e)=>{
     e.preventDefault();
     //get user info
@@ -77,9 +78,9 @@ loginform.addEventListener('submit',(e)=>{
         })    
     
     }).then(function(error){
-        console.log(error.message);    
+        talk = 'error';
     })
-    console.log('error');
+    console.log(talk);
 
 })
 

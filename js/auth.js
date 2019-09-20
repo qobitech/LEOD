@@ -65,7 +65,11 @@ loginform.addEventListener('submit',(e)=>{
               password
             )
         ).then(res=>{checkerror = res}).catch(function(error){
-            console.log('error');
+            if(error != null){
+                console.log('error')
+            }else{
+                console.log('success')
+            }
         });;
 
     })

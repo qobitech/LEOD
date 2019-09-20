@@ -71,7 +71,7 @@ loginform.addEventListener('submit',(e)=>{
         checkerror = 'error'
     });;
 
-    if(checkerror !== 'error'){
+    if(checkerror != 'error'){
         firebase.auth().onAuthStateChanged(function(user){
             if(user){
                 //User is signed in

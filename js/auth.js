@@ -100,6 +100,6 @@ function logout(){
 const logoutbtn = document.getElementById('signout').value;
 
 logoutbtn.addEventListener('click',(e)=>{
-    logout();
+    // logout();
     console.log('signout');
 })

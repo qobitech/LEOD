@@ -1,3 +1,7 @@
+if(location.protocol !== "https://qobitech.github.io/LEOD/"){
+    location.replace(window.location.href.replace("https://qobitech.github.io/LEOD/"));
+}
+
 const signupform = document.getElementById('reg');
 
 //Registration
@@ -63,7 +67,7 @@ loginform.addEventListener('submit',(e)=>{
                 console.log('Welcome User :' + email_id +
                 '<br/>Verified : ' + email_verified)
                 if(email_verified === true){
-                    window.location.href = "https://qobitech.github.io/LEOD/loginsuccess.html";
+                    window.location.replace("https://qobitech.github.io/LEOD/loginsuccess.html");
                 }else{
                     setTimeout(logout,2000);
                 }
@@ -75,7 +79,7 @@ loginform.addEventListener('submit',(e)=>{
 function send_verification(){
     var user = firebase.auth().currentUser;
     user.sendEmailVerification().then(function(){
-        window.location.href = "https://qobitech.github.io/LEOD/verifyemail.html";
+        window.location.replace("https://qobitech.github.io/LEOD/verifyemail.html");
     }).catch(function(error){
         //An error happened
     });
@@ -83,6 +87,6 @@ function send_verification(){
 
 function logout(){
         auth.signOut().then(res=>{
-            window.location.href = "https://qobitech.github.io/";
+            window.location.replace("https://qobitech.github.io/");
         })
 }

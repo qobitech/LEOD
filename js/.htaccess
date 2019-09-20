@@ -1,5 +1,0 @@
-#mod_rewrite starts here
-+FollowSymlinks
-RewriteEngine on
-
-ReWriteCond %{REQUEST_URI} \.html$

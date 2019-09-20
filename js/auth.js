@@ -81,7 +81,9 @@ loginform.addEventListener('submit',(e)=>{
           
     })
     firebase.auth().onAuthStateChanged(function(user){
-        if(!user){
+        if(user){
+            
+        }else{
             console.log('not logged in');
         }
     })  

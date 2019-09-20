@@ -68,10 +68,8 @@ loginform.addEventListener('submit',(e)=>{
           password
         )
     ).then(res=>{checkerror = res}).catch(function(error){
-        checkerror = 'error'
+        console.log('error')
     });;
-
-    console.log(checkerror);
 
     // firebase.auth().onAuthStateChanged(function(user){
     //     if(user){

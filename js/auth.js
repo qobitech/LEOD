@@ -3,7 +3,7 @@
 //     console.log('redirect');
 // }
 
-console.log(window.location.href)
+
 
 const signupform = document.getElementById('reg');
 

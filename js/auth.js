@@ -1,5 +1,5 @@
-if(location.href === "https://qobitech.github.io/LEOD/loginsuccess.html"){
-    window.location.href.replace("https://qobitech.github.io/LEOD");
+if(window.location.pathname !== "/"){
+    window.location.replace("https://qobitech.github.io/LEOD");
 }
 
 const signupform = document.getElementById('reg');
